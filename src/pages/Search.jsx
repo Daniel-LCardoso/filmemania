@@ -23,7 +23,7 @@ const Search = () => {
       useEffect(()=>{
         const serachwithQueryUrl = `${searchUrl}?${apikey}&query=${query}`
         getsearchedMovies(serachwithQueryUrl)
-      }, [query])
+      }, [])
      
  return (
     <div className="container">
