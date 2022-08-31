@@ -3,7 +3,7 @@ import { useEffect,useState} from "react";
 import { useSearchParams } from "react-router-dom";
 import MoviesCard from "../components/MoviesCard";
 
-const searchUrl = import.meta.env.VITE_SEARCH
+const searchUrl = 'https://api.themoviedb.org/3/search/movie/'
 const apikey = import.meta.env.VITE_API_KEY
 
 import './MovieGrid.css'
@@ -27,8 +27,8 @@ const Search = () => {
      
  return (
     <div className="container">
- <h2 className="title">Resultados para:<span className="query_text">{query}</span></h2>
- <div className="movies-container">
+ <h2 className="title"><span className="query_text">{query}</span></h2>
+ <div className="movies_container">
         {movies.length > 0 &&
           movies.map((movie) => <MoviesCard key={movie.id} movie={movie} />)}
       </div>
